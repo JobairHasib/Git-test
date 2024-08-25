@@ -1,2 +1,102 @@
-Hola Leo!
-Como astas!
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\Git test>git init
+Initialized empty Git repository in D:/Git test/.git/
+
+D:\Git test>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Git test>git add -A
+
+D:\Git test>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+
+D:\Git test>git commit -m "Added a text file"
+[master (root-commit) e2e1393] Added a text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+
+D:\Git test>git config --global user.name "Mohammad Jobair Hasib Joy"
+
+D:\Git test>git config --global user.email "jobair.hasib@gmail.com"
+
+D:\Git test>git config --global init.defaultBranch main
+
+D:\Git test>git log
+commit e2e139359c15e19204951112dcc73d2e39542df2 (HEAD -> master)
+Author: Jobair Hasib <jobair.hasib@gmail.com>
+Date:   Fri Aug 23 22:48:11 2024 +0600
+
+    Added a text file
+
+D:\Git test>git remote add origin git@github.com:JobairHasib/Git-test.git
+
+D:\Git test>git branch -M main
+
+D:\Git test>git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 220 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:JobairHasib/Git-test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\Git test>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\Git test>git add -A
+
+D:\Git test>git commit -m "made change in hello file"
+[main 60f2e3b] made change in hello file
+ 1 file changed, 1 insertion(+)
+
+D:\Git test>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 277 bytes | 138.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:JobairHasib/Git-test.git
+   e2e1393..60f2e3b  main -> main
+
+D:\Git test>git remote
+origin
+
+D:\Git test>git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 928 bytes | 7.00 KiB/s, done.
+From github.com:JobairHasib/Git-test
+ * branch            main       -> FETCH_HEAD
+   60f2e3b..1df5ce5  main       -> origin/main
+Updating 60f2e3b..1df5ce5
+Fast-forward
+ hello.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\Git test>
